@@ -37,9 +37,9 @@ setFilter(data.results);
   
   </div>
 
-     <div className='w-[100%] min-h-[20vh] flex gap-8 ml-14 overflow-x-auto mt-4   '>
+     <div className='w-[100%]  carts1 min-h-[20vh] flex gap-8 ml-14 overflow-x-auto mt-4   '>
         
-       {Filter && Filter.map((ele,index)=><Link to={`/${ele.media_type}/${ele.id}`} className='min-w-[20%] shadow-sm h-[50vh] rounded hover:scale-110 duration-200 bg-zinc-900 mb-[3vh]'><img className='w-[100%] object-cover  h-[40vh] rounded' key={index}
+       {Filter && Filter.map((ele,index)=><Link to={`/${ele.media_type}/${ele.id}`} className='min-w-[20%] shadow-sm  text-center commonimg h-[50vh] rounded hover:scale-110 duration-200 bg-zinc-900 mb-[3vh]'><img className='w-[100%] object-cover img h-[40vh] rounded' key={index}
         src={`https://image.tmdb.org/t/p/original${ele.backdrop_path||ele.profile_path}`}/>
         <h1 className='text-zinc-200 font-semibold text-l '>{ele.title||ele.name||
 ele.original_name}</h1>

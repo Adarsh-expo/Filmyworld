@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Sidenav() {
   return (
-    <div className='w-[20%]  h-screen border-r-2 border-zinc-300 overflow-x-hidden '>
+    <div className='w-[20%] sidenav h-screen border-r-2 border-zinc-300 overflow-x-hidden '>
 
 <h1 className='text-2xl font-bold ml-8 mt-5 mb-5 text-zinc-200'><i  className="ri-tv-fill  text-[#6556CD]  "></i><span>Film</span></h1>
     <nav className='flex flex-col gap-3 ml-8  text-zinc-400'>
