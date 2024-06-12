@@ -143,3 +143,12 @@ align-items: center;
     margin-top: -1rem;
   }
 }
+@media(max-width:450px){
+  .llp{
+    flex-wrap: wrap;
+    .ddimg{
+      width: 18rem;
+      height: 16rem;
+    }
+  }
+}

@@ -31,7 +31,7 @@ console.log("unmount")
  },[id])
  return (
   po ?<div className='flex flex-col  relative w-[100%] pb-3 h-[100vh] overflow-y-scroll overflow-x-hidden'>
-   <div className='w-screen min-h-[80vh] flex  mb-3' style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${po.detail.backdrop_path||po.detail.poster_path ||po.detail.profile_path})`,
+   <div className='w-screen headpic min-h-[95vh] flex  mb-3' style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${po.detail.backdrop_path||po.detail.poster_path ||po.detail.profile_path})`,
  backgroundSize:'cover',
  backgroundPosition:'center',
 
@@ -40,14 +40,14 @@ console.log("unmount")
  }>
    
    <i className="ri-arrow-left-line  hover:text-[#6556CD]   text-3xl" onClick={()=>{nav(-1)}}></i>
-   <img  className='w-[20vw] h-[60vh]   rounded-md ml-[5vh] mt-[10vh]  bg-white object-cover' 
+   <img  className='w-[20vw] h-[60vh] bisc  rounded-md ml-[5vh] mt-[10vh]  bg-white object-cover' 
    src={`https://image.tmdb.org/t/p/original/${po.detail.
  poster_path|| po.detail.belongs_to_collection[0] ||po.detail.profile_path}`}/>
  
  <div className='flex  ml-[5vh] flex-col mt-[10vh] text-zinc-100 '>
 
    <div className='text-3xl font-bold font-sans '>{po.detail.original_title}</div>
-   <div className='flex mt-3 font-semibold'> <h2 className='mr-4'>{po.detail.release_date }({po.detail.origin_country})</h2> {po.detail.genres.map((ele,index)=><h1 key={index}>{ele.name}{index < po.detail.genres.length - 1 ? ', ' : ''} </h1>)}<h1 className='ml-2'>{po.detail.runtime}min</h1></div>
+   <div className='flex  datesec mt-3 font-semibold'> <h2 className='mr-4'>{po.detail.release_date }({po.detail.origin_country})</h2> {po.detail.genres.map((ele,index)=><h1 key={index}>{ele.name}{index < po.detail.genres.length - 1 ? ', ' : ''} </h1>)}<h1 className='ml-2'>{po.detail.runtime}min</h1></div>
    
    <div className='flex gap-8'><div className='mt-1 w-4 leading-6 text-xl'>User Score</div> <span className='bg-amber-400 flex justify-center mt-2 items-center rounded-full h-[7vh] w-[7vh]'><span>{(po.detail.vote_average*10).toFixed()}<sup>%</sup></span></span></div>
    <div className='text-xl font-semibold mt-4 font-sans'>OVERVIEW</div>
@@ -70,8 +70,9 @@ className='h-[6vh] w-[7vh] object-cover rounded'  src={`https://image.tmdb.org/t
 </div>
 
  </div>
- <Link to={`/tv/details/${po.detail.id}/trailer`}   className='w-[18vh] h-[5vh] hover:scale-105 shadow text-white rounded text-center mt-4 mb-12   p-1 ' 
- style={{backgroundColor:"#6556CD"}}>Watch Trailer</Link>
+<div  className='flex   gg '><Link to={`/tv/details/${po.detail.id}/trailer`}   className='w-[18vh] h-[5vh] hover:scale-105 shadow text-white rounded text-center mt-4 mb-12   p-1 ' 
+ style={{backgroundColor:"#6556CD"}}>Watch Trailer</Link></div> 
+ 
  </div>
  
  
@@ -81,7 +82,7 @@ className='h-[6vh] w-[7vh] object-cover rounded'  src={`https://image.tmdb.org/t
 
 
  {/* code for horizantle cart for actor and detail side bar */}
-  <div className='flex justify-around gap-4'>{po.credits.cast.length==0?<div className='text-zinc-200 text-xl'>No Information Available</div>: <Horizantlecart   info={po.credits.cast}/> }<Detailsidebar  data={po.detail}  externalid={po.externalid}/></div>
+  <div className='flex  target5 justify-around gap-4'>{po.credits.cast.length==0?<div className='text-zinc-200 text-xl'>No Information Available</div>: <Horizantlecart   info={po.credits.cast}/> }<Detailsidebar  data={po.detail}  externalid={po.externalid}/></div>
 
 
  {/* code for horizantle cart of recommendee and similar using same cart but with differt array passing values */}

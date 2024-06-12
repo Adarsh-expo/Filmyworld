@@ -16,7 +16,7 @@ else{
 })
   return (<>
     {navscreen && <button className='text-zinc-300 text-2xl  absolute top-[1.6rem] left-[0.6rem] z-10' onClick={()=>{setscreen((pre)=>!pre)}}><i  class="    hover:text-white  ri-menu-line "></i></button>}
-    <div className={` ${navscreen ? `${screen ?'left-0 z-10 w-[60vw]  h-[80vh]  overflow-y-auto bg-[#1F1E24]':'left-[-30rem]'}  fixed`:'w-[20%]         sidenav h-screen border-r-2 border-zinc-300 overflow-x-hidden '}        `}>
+    <div className={` ${navscreen ? `${screen ?'left-0 z-10 w-[60vw] rounded h-[80vh]  overflow-y-auto bg-[#1F1E24]':'left-[-30rem]'}  fixed`:'w-[20%]         sidenav h-screen border-r-2 border-zinc-300 overflow-x-hidden '}        `}>
   {screen &&<button className=' fixed   text-xl text-zinc-100 left-[9rem] top-[2vh]  ' onClick={()=>{ setscreen(false)}}><i class="  ri-xrp-fill"></i></button> }  
 <h1 className='text-2xl font-bold ml-8 mt-5 mb-5 text-zinc-200'><i  className="ri-tv-fill  text-[#6556CD]  "></i><span>Film</span></h1>
     <nav className='flex flex-col gap-3 ml-8  text-zinc-400'> 

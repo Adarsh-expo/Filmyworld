@@ -36,7 +36,7 @@ po?
 <i className="ri-arrow-left-line  hover:text-[#6556CD]   text-3xl" onClick={()=>{nav(-1)}}></i>
 
 {/* it contains pic plus detail in flex row */}
-<div className='w-[100vw] min-h-[80vh]   flex '><img className='w-[30vw]  ml-[8vh] rounded-sm mt-[2vh] h-[80vh] object-cover'  
+<div className='w-[100vw] min-h-[80vh] llp  flex '><img className='w-[30vw] ddimg  ml-[8vh] rounded-sm mt-[2vh] h-[80vh] object-cover'  
 src={`https://image.tmdb.org/t/p/original/${po.detail.profile_path ||po.detail. poster_path}`}/>
 <div className='ml-[8vh] flex flex-col'>
   <div className='mt-[6vh] text-zinc-100 text-3xl'>{po.detail.name}</div> 
@@ -51,7 +51,7 @@ src={`https://image.tmdb.org/t/p/original/${po.detail.profile_path ||po.detail. 
 
 
    <div className='mt-[3vh] mb-[4vh] ml-[4vh] text-zinc-100 text-2xl'>Combined Credits</div>
-<div className='flex gap-2 '> <Horizantlecart   info={po.combinecredits.cast}/> <Detailsidebar data={po.detail} externalid={po.externalid}/></div>
+<div className='flex gap-2  target5'> <Horizantlecart   info={po.combinecredits.cast}/> <Detailsidebar data={po.detail} externalid={po.externalid}/></div>
 <div className='mt-[3vh] mb-[4vh] ml-[4vh] text-zinc-100 text-2xl' >Acting</div>
 <Dropdown  arrow={arrow} setarrow={setarrow} options={['TV','MOVIE']} fun={categfun} />
 <div className='flex flex-col  mt-[2vh] list-disc ml-3 rounded bg- shadow-zinc-300 shadow-lg w-[70%]  overflow-y-auto h-[55vh] border border-solid  border-zinc-100'> 
