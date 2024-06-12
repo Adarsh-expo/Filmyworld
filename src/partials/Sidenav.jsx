@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Sidenav() {
-  return (
-    <div className='w-[20%] sidenav h-screen border-r-2 border-zinc-300 overflow-x-hidden '>
+  const [navscreen,setnavscreen]=useState(window.innerWidth<1240);
+  const [screen,setscreen]=useState(false);
+window.addEventListener('resize',()=>{
+if(window.innerWidth<1240){
+  setnavscreen(true)
+}
+else{
+  setnavscreen(false)
+}
 
+
+})
+  return (<>
+    {navscreen && <button className='text-zinc-300 text-2xl  absolute top-[1.6rem] left-[0.6rem] z-10' onClick={()=>{setscreen((pre)=>!pre)}}><i  class="    hover:text-white  ri-menu-line "></i></button>}
+    <div className={` ${navscreen ? `${screen ?'left-0 z-10 w-[60vw]  h-[80vh]  overflow-y-auto bg-[#1F1E24]':'left-[-30rem]'}  fixed`:'w-[20%]         sidenav h-screen border-r-2 border-zinc-300 overflow-x-hidden '}        `}>
+  {screen &&<button className=' fixed   text-xl text-zinc-100 left-[9rem] top-[2vh]  ' onClick={()=>{ setscreen(false)}}><i class="  ri-xrp-fill"></i></button> }  
 <h1 className='text-2xl font-bold ml-8 mt-5 mb-5 text-zinc-200'><i  className="ri-tv-fill  text-[#6556CD]  "></i><span>Film</span></h1>
-    <nav className='flex flex-col gap-3 ml-8  text-zinc-400'>
+    <nav className='flex flex-col gap-3 ml-8  text-zinc-400'> 
         <h1 className='font-semibold text-xl mb-3'>New Feed</h1>
         <Link to="/trending" className='hover:bg-[#6556CD] rounded-lg hover:text-white p-3 duration-300 w-[80%]'><i className="ri-fire-fill mr-2 "></i>Trending</Link>
         <Link to='/popular' className='hover:bg-[#6556CD] rounded-lg hover:text-white p-3 duration-300 w-[80%]'  ><i className="ri-bard-fill  mr-2"></i>Popular</Link>
@@ -23,7 +36,7 @@ function Sidenav() {
         
         
         </nav>  
-    </div>
+    </div></>
   )
 }
 

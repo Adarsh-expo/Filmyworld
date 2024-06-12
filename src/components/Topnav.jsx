@@ -27,14 +27,14 @@ catch(error){
 
 useEffect(()=>{ Getsearch()},[query])
   return (
-    <div className=' flex  justify-start relative items-center mt-2 ml-[15%] w-[full] h-[10vh]'>
+    <div className=' flex  justify-start topnav relative items-center mt-2 ml-[15%] w-[80vw] h-[10vh]'>
         <i className="ri-search-line text-zinc-200 text-3xl"></i>
-        <input  type='text' className='w-[50%] p-3 mx-10 outline-none bg-transparent
-         text-white text-zinc-200' onChange={(e)=>{setquery(e.target.value)}} value={query}   placeholder='Search anything'/>
+        <input  type='text' className='w-[50vw] input  p-3 mx-10 outline-none bg-transparent
+         text-white ' onChange={(e)=>{setquery(e.target.value)}} value={query}   placeholder='Search anything'/>
         
         {query.length>0 &&(
         <i className="ri-close-line text-zinc-200 text-3xl" onClick={()=>{setquery("")}}></i>)}
-        <div  className='w-[55%] absolute top-[100%] ml-[10%] z-[100]  max-h-[400%] overflow-y-scroll overflow-x-hidden rounded bg-zinc-100'>
+        <div  className='w-[60%] absolute top-[100%] ml-[10%] z-[100]  max-h-[400%] overflow-y-scroll overflow-x-hidden rounded bg-zinc-100'>
 {search!==null && search.map((ele,index)=><Link  to={`/${ele.media_type }/details/${ele.id}`}  key={index} className='p-10 inline-block 
  font-semibold hover:text-black  text-zinc-400 duration-300 hover:bg-zinc-200 
    flex justify-start items-center border-b-2 border-zinc-200  w-[100%] '>

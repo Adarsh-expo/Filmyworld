@@ -16,9 +16,9 @@ setwallpaper(data.results);
 }
 useEffect(()=>{allmovies()},[])
   return (wallpaper?
-  <>  <Sidenav/><i class="ri-menu-line  menu hidden"></i>
-    <div className='w-[80%] main overflow-x-hidden overflow-y-auto '>
-<Topnav/>
+  <>  <Sidenav/>
+    <div className=' w-[90%] main  relative overflow-x-hidden overflow-y-auto '>
+<div className='topnavhead'><Topnav/></div>
 <Header dataji={wallpaper}/>
 
 <Carts/>

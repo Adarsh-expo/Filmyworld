@@ -6,7 +6,7 @@ function Header({dataji}) {
      img=Math.floor((Math.random()*dataji.length));
     console.log(img)}
   return (<>
-    {dataji && <div className='w-[100%]  hover:text-zinc-600 h-[70vh] rounded pl-12  flex flex-col justify-end'  style={{
+    {dataji && <div className='w-[100vw]  hover:text-zinc-600 h-[70vh] rounded pl-12  flex flex-col justify-end'  style={{
         
 backgroundImage:`url(https://image.tmdb.org/t/p/original${dataji[img].backdrop_path||dataji[img].profile_path})`,
 backgroundSize:'cover',

@@ -51,10 +51,12 @@ const refreshhandler=()=>{
 }
 useEffect(()=>{refreshhandler()},[categ])
   return ( Filter.length>0?
-    <div className='w-screen h-screen  '>
-    <div className='w-screen h-[10vh]    flex  pt-[2vh] text-xl font-bold text-zinc-400'>
-    <i class="ri-arrow-left-line mt-[4vh] ml-3 mr-2 hover:text-[#6556CD]" onClick={()=>{nav(-1)}}></i>
-    <h1 className='mt-[4vh]  w-[30vh]'>Tv shows</h1> <div className='w-[90%]  flex mt-1 ml-[25%] '><Topnav/>
+    <div className='w-screen target4 h-screen  '>
+    <div className='w-screen h-[10vh]  target3  flex  pt-[2vh] text-xl font-bold text-zinc-400'>
+    <button className='arrow flex justify-center items-center'><i class="ri-arrow-left-line mt-[4vh] ml-3 mr-2 hover:text-[#6556CD]" onClick={()=>{nav(-1)}}></i> <h1 className='mt-[4vh]  w-[30vh]'>Tv shows</h1></button>
+    
+    
+    <div className='w-[52%] flex mt-1 ml-[10%]'><Topnav/>
    </div><Dropdown arrow={arrow} setarrow={setarrow} options={['on_the_air','airing_today','popular','top_rated']} fun={categfun}/> 
   </div>
 

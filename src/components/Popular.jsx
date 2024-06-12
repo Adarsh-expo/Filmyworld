@@ -53,12 +53,15 @@ sethasMore(false);
     }
     useEffect(()=>{refreshhandler()},[categ])
   return ( Filter.length>0?
-    <div className='w-screen h-screen  '>
+    <div className='w-screen h-screen target4 '>
 
-    <div className='w-screen h-[10vh]    flex  pt-[2vh] text-xl font-bold text-zinc-400'>
-        <i class="ri-arrow-left-line mt-[4vh] ml-3 mr-2 hover:text-[#6556CD]" onClick={()=>{nav(-1)}}></i>
-        <h1 className='mt-[4vh]'>Popular</h1> <div className='w-[90%] flex mt-1 ml-[25%] '><Topnav/>
-       </div><Dropdown arrow={arrow} setarrow={setarrow} options={['TV','MOVIE']} fun={categfun}/> 
+    <div className='w-screen h-[10vh]  target3  flex  pt-[2vh] text-xl font-bold text-zinc-400'>
+      <button className='arrow  flex justify-center items-center'><i class="ri-arrow-left-line mt-[4vh] ml-3 mr-2 hover:text-[#6556CD]" onClick={()=>{nav(-1)}}></i><h1 className='mt-[4vh]'>Popular</h1></button>  
+         <div className='w-[52%] flex mt-1 ml-[10%]'><Topnav/>
+       </div>
+       <div className=' flex  mr-[1rem]'><Dropdown arrow={arrow} setarrow={setarrow} options={['TV','MOVIE']} fun={categfun}/> </div>
+       
+       
       </div>
 
 <InfiniteScroll 

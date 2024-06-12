@@ -7,7 +7,7 @@ function About() {
     <div className='w-screen h-screen flex  justify-center  items-center flex-col'>
 
         <div className='text-zinc-200 text-2xl font-semibold'>ABOUT</div>
-        <div className='w-[80vw] rounded-md  h-[70vh] mt-[10vh] p-2 overflow-y-auto text-[#95A3B9] bg-[rgba(40,53,73,0.3)]'>
+        <div className='w-[80vw] rounded-md  h-[70vh] mt-[10vh] p-2N overflow-y-auto text-[#95A3B9] bg-[rgba(40,53,73,0.3)]'>
           
        <h1 className='block  text-center text-lg mb-2'>Welcome to MovieMagic, your ultimate destination for exploring and discovering movies and TV shows!</h1> 
 
