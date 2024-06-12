@@ -36,7 +36,7 @@ po?
 <i className="ri-arrow-left-line  hover:text-[#6556CD]   text-3xl" onClick={()=>{nav(-1)}}></i>
 
 {/* it contains pic plus detail in flex row */}
-<div className='w-[100vw] min-h-[80vh] llp  flex '><img className='w-[30vw] ddimg  ml-[8vh] rounded-sm mt-[2vh] h-[80vh] object-cover'  
+<div className='w-[100vw] min-h-[80vh] llp   flex '><img className='w-[30vw] ddimg  ml-[8vh] rounded-sm mt-[2vh] h-[80vh] object-cover'  
 src={`https://image.tmdb.org/t/p/original/${po.detail.profile_path ||po.detail. poster_path}`}/>
 <div className='ml-[8vh] flex flex-col'>
   <div className='mt-[6vh] text-zinc-100 text-3xl'>{po.detail.name}</div> 

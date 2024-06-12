@@ -146,9 +146,10 @@ align-items: center;
 @media(max-width:450px){
   .llp{
     flex-wrap: wrap;
-    .ddimg{
+    align-items: center;
+    justify-content: center;
+  }.ddimg{
       width: 18rem;
       height: 16rem;
     }
-  }
 }
