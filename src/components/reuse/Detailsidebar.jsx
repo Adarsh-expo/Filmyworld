@@ -4,7 +4,7 @@ import {  useSelector } from 'react-redux'
 function Detailsidebar({data,externalid}) {
  
   return (
-    <div className='w-[24%] bg-[#18181B] shadow-xl rounded-lg text-zinc-200  min-h-[50vh]'>
+    <div className='w-[24%] detailsidebar  bg-[#18181B] shadow-xl rounded-lg text-zinc-200  min-h-[50vh]'>
         <div className='flex justify-around text-2xl'>
           
           <a  target="_blank" href={externalid.imdb_id  ?(data.gender?`https://www.imdb.com/name/${externalid.imdb_id}/`:`https://www.imdb.com/title/${externalid.imdb_id}`) :'javascript:void(0)'  }  > 

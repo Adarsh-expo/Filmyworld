@@ -32,7 +32,7 @@ console.log("unmount")
   },[id])
   return (
    po ?<div className='flex flex-col  relative w-[100%] pb-3 h-[100vh] overflow-y-scroll overflow-x-hidden'>
-    <div className='w-screen min-h-[95vh] flex  mb-3' style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${po.detail.backdrop_path||po.detail.poster_path ||po.detail.profile_path})`,
+    <div className='w-screen headpic  min-h-[95vh] flex  mb-3' style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${po.detail.backdrop_path||po.detail.poster_path ||po.detail.profile_path})`,
   backgroundSize:'cover',
   backgroundPosition:'center',
  
@@ -41,7 +41,7 @@ console.log("unmount")
   }>
     
     <i className="ri-arrow-left-line  hover:text-[#6556CD]   text-3xl" onClick={()=>{nav(-1)}}></i>
-    <img  className='w-[20vw] h-[60vh]   rounded-md ml-[5vh] mt-[10vh]  bg-white object-cover' 
+    <img  className='w-[20vw] h-[60vh] bisc  rounded-md ml-[5vh] mt-[10vh]  bg-white object-cover' 
     src={`https://image.tmdb.org/t/p/original/${po.detail.
   poster_path|| po.detail.belongs_to_collection[0] ||po.detail.profile_path}`}/>
   
@@ -82,7 +82,7 @@ className='h-[6vh] w-[7vh] object-cover rounded'  src={`https://image.tmdb.org/t
 
 
   {/* code for horizantle cart for actor and detail side bar */}
-  <div className='flex gap-4'> <Horizantlecart   info={po.credits.cast}/> <Detailsidebar data={po.detail} externalid={po.externalid}/></div>
+  <div className='flex   target5  gap-4'> <Horizantlecart   info={po.credits.cast}/> <Detailsidebar data={po.detail} externalid={po.externalid}/></div>
 
 
   {/* code for horizantle cart of recommendee and similar using same cart but with differt array passing values */}
