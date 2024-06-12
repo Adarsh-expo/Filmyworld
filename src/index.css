@@ -116,10 +116,30 @@ align-items: center;
   .detailsidebar{
     min-width: 15rem;
   }
-  
+  .bisc{
+    width: 7rem;
+    height: 8rem;
+  }
 }
 @media(max-width:700px){
  .headpic{
-  height: 10vmin;
+  height: 80vh;
  }
+}
+@media(max-width:560px){
+
+  .datesec{
+    flex-wrap:wrap;
+  }
+  .headpic{
+    height: 90vh;
+   }
+  
+}
+@media(max-width:405px){
+  .gg{
+    width: 10rem;
+    padding-left: -1rem;
+    margin-top: -1rem;
+  }
 }
