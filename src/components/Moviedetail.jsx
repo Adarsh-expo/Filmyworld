@@ -52,7 +52,7 @@ console.log("unmount")
     
     <div className='flex gap-8'><div className='mt-1 w-4 leading-6 text-xl'>User Score</div> <span className='bg-amber-400 flex justify-center mt-2 items-center rounded-full h-[7vh] w-[7vh]'><span>{(po.detail.vote_average*10).toFixed()}<sup>%</sup></span></span></div>
     <div className='text-xl font-semibold mt-4 font-sans'>OVERVIEW</div>
-    <div className='font-semibold font-light'>{po.detail.overview}</div>
+    <div className='font-semibold font-normal'>{po.detail.overview.slice(0,150)}</div>
     <div className='flex flex-col mt-4 gap-4'>
     <div className='flex  gap-4'>
 {po.watchprovider && po.watchprovider.flatrate && <><div>Available on Plateform</div> {po.watchprovider.flatrate.map((ele,index)=><img  
